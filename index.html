@@ -5,6 +5,17 @@
     
 
     <head>
+        <script>
+window.addEventListener('message', function(event) {
+    var data = event.data;
+    if (data.newValue !== undefined) {
+               target = data.newValue;
+        // Send a success message back to the parent
+        event.source.postMessage({ success: true }, event.origin);
+    }
+});
+</script>
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
