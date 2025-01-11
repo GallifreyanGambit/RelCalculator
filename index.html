@@ -5,17 +5,7 @@
     
 
     <head>
-        <script>
-window.addEventListener('message', function(event) {
-    var data = event.data;
-    if (data.newValue !== undefined) {
-               global.target = data.newValue;
-        // Send a success message back to the parent
-        event.source.postMessage({ success: true }, event.origin);
-    }
-});
-</script>
-
+       
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -51,12 +41,12 @@ window.addEventListener('message', function(event) {
                 border: 0px;
             }
             :-webkit-full-screen #canvas {
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 80%;
             }
             :-webkit-full-screen {
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 80%;
             }
             
             /* Custom Runner Styles */
@@ -101,6 +91,16 @@ window.addEventListener('message', function(event) {
     
 
     <body>
+         <script>
+window.addEventListener('message', function(event) {
+    var data = event.data;
+    if (data.newValue !== undefined) {
+               global.target = data.newValue;
+        // Send a success message back to the parent
+        event.source.postMessage({ success: true }, event.origin);
+    }
+});
+</script>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             
             <!-- Builtin injector for splash screen -->
