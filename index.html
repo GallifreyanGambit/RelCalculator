@@ -9,7 +9,7 @@
 window.addEventListener('message', function(event) {
     var data = event.data;
     if (data.newValue !== undefined) {
-               target = data.newValue;
+               global.target = data.newValue;
         // Send a success message back to the parent
         event.source.postMessage({ success: true }, event.origin);
     }
